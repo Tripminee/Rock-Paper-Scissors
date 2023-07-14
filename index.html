@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <script>
+        function playRound () {
+            const computerSelection = getComputerChoice();
+            const playerSelection = prompt("Your turn (Rock,Paper,Scissor)", '');
+            let playerSelection2 = playerSelection.toUpperCase();
+                if (playerSelection2 === computerSelection) {
+                    console.log( "That is Draw" )
+                } else if (
+                    playerSelection2 == "ROCK" && computerSelection == "SCISSOR" ||
+                    playerSelection2 == "SCISSOR" && computerSelection == "PAPER" ||
+                    playerSelection2 == "PAPER" && computerSelection == "ROCK"
+                ) { 
+                    console.log( "You Win!!" );
+                } else {
+                    console.log( "You lose" )
+                }
+            }
+        
+        function getComputerChoice() {
+            const choice = ["ROCK", "PAPER", "SCISSOR"];
+            const random = Math.floor(Math.random() * choice.length)
+            return choice[random];
+        }
+
+        function game() {
+        
+        }
+
+
+    </script>
+</html>
