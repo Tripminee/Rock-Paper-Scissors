@@ -1,34 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>ROCK PAPER SCISSOR GAME</title>
+    </head>
 
-    <script>
-        function playRound () {
-            const computerSelection = getComputerChoice();
-            const playerSelection = prompt("Your turn (Rock,Paper,Scissor)", '');
-            let playerSelection2 = playerSelection.toUpperCase();
-                if (playerSelection2 === computerSelection) {
-                    console.log( "That is Draw" )
-                } else if (
-                    playerSelection2 == "ROCK" && computerSelection == "SCISSOR" ||
-                    playerSelection2 == "SCISSOR" && computerSelection == "PAPER" ||
-                    playerSelection2 == "PAPER" && computerSelection == "ROCK"
-                ) { 
-                    console.log( "You Win!!" );
-                } else {
-                    console.log( "You lose" )
-                }
-            }
-        
-        function getComputerChoice() {
-            const choice = ["ROCK", "PAPER", "SCISSOR"];
-            const random = Math.floor(Math.random() * choice.length)
-            return choice[random];
-        }
+    <body>
+        <button id = "gameStart" data-choice="gameStart">Start Game</button>
+        <div class ="button">
+            <button class="butt" data-choice="Rock">Rock</button> 
+            <button class="butt" data-choice="Paper">Paper</button>
+            <button class="butt" data-choice="Scissor">Scissor</button>
+        </div> 
+        <div class ="result"></div>
 
-        function game() {
-        
-        }
-
-
-    </script>
+    </body>
+    <script src="javascript.js" defer></script>
 </html>
